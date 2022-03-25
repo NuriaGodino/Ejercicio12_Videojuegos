@@ -1,0 +1,10 @@
+nav li{
+    display: inline-block;
+    width: 7%;
+    padding: 20px 10px;
+}
+
+nav{
+    margin-top: -16px;
+    background-color: rgb(144, 255, 255);
+}

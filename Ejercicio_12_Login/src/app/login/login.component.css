@@ -1,0 +1,31 @@
+.loginContenedor{
+
+    margin-top: -20px;
+}
+
+.envoltura{
+	width: 100%;
+	background:  #fffcf1;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px 1px  #eeeeee;
+}
+
+h3{
+	color: #494949;
+}
+
+.fila{
+	width: 84%;
+	margin-bottom: 20px;
+	height: 25px;
+	
+}
+
+.fila2{
+	margin-top: 37px;
+	width: 84%;
+	margin-bottom: 20px;
+	height: 25px;
+	
+}
+
