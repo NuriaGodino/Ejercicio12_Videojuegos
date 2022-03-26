@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Videojuego } from '../entidades/Videojuego';
 
 @Component({
   selector: 'app-bienvenida',
@@ -9,16 +10,19 @@ import { ActivatedRoute } from '@angular/router';
 export class BienvenidaComponent implements OnInit {
   usuario:string = ''
   pass:string = ''
+  videojuegos:Videojuego[] = [(new Videojuego("Horizon Forbidden West", "Guerrilla Games", 4.2, "../assets/Horizon.png")),
+  (new Videojuego("Spider-Man", "Insomniac Games", 4.9, "../assets/spiderman.png")),
+  (new Videojuego("The Last of Us Part II", "Naughty Dog", 3.7, "../assets/Ellie.png")),
+  (new Videojuego("Uncharted 4: El desenlace del ladrón", "Naughty Dog", 4.8, "../assets/uncharted.png")),
+  (new Videojuego("Hogwarts Legacy", "Avalanche Software", 5, "../assets/hw.png"))]
 
-  parametroQuery1: string = ''
-  parametroQuery2: string = ''
-
-  constructor(route:ActivatedRoute) {
+  constructor(private router:Router ,route:ActivatedRoute) {
     this.usuario = route.snapshot.params["usuario"]  
-    this.pass = route.snapshot.params["pass"]
+    this.pass = route.snapshot.params["pass"] 
+  }
 
-    this.parametroQuery1 = route.snapshot.queryParams["parametro1"]
-    this.parametroQuery2 = route.snapshot.queryParams["parametro2"]
+  public detalle(juego:Videojuego){
+    this.router.navigate(['/detalle', juego.id, juego.titulo, juego.compania, juego.icon, juego.valMedia, this.usuario, this.pass])
   }
 
   ngOnInit() {

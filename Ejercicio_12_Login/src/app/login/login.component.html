@@ -8,10 +8,11 @@
     </div>
     <div class="fila2">
       <label for="pass">Contraseña:</label>
-      <input [(ngModel)] = "pass" type="text">
+      <input [(ngModel)] = "pass" type="password">
       <label [hidden] = "errorPass">{{passIncorrecta}}</label>
+    </div>
     <div class="boton">
       <button (click)="login()">Enviar</button>
     </div>
-  </div>
+  
 </div>

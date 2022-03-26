@@ -1,9 +1,14 @@
-<div>
-  <p>Valores pasados</p>
-  <p>Nombre: {{usuario}}</p>
-  <p>Universo: {{pass}}</p>
+<div class="envoltura">
+  <h3>Bienvenido/a {{usuario}}</h3>
+  <div >
+    <ul>
+      <li *ngFor="let juego of videojuegos; index as i" (click) = "detalle(juego)">
+        ID: {{juego.id}} -
+        Titulo: {{juego.titulo}}
+        <img src="{{juego.icon}}">
+      </li>
+    </ul>
+  </div>
+  
 </div>
 
-<div>
-  {{parametroQuery1}} {{parametroQuery2}}
-</div>

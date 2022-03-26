@@ -8,14 +8,20 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { DetalleComponent } from './detalle/detalle.component';
+import { AboutComponent } from './about/about.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [								
     AppComponent,
       CabeceraComponent,
       NavegacionComponent,
       LoginComponent,
-      BienvenidaComponent
+      BienvenidaComponent,
+      DetalleComponent,
+      AboutComponent,
+      ContactoComponent
    ],
   imports: [
     BrowserModule,
